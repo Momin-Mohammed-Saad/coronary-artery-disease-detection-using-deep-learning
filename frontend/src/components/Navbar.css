@@ -1,0 +1,131 @@
+/* Navbar Wrapper */
+.navbar {
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: linear-gradient(135deg, hsla(180, 68%, 49%, 0.555) 0%, #d8c9c9 100%) !important; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+  
+  padding-top: 0.2rem !important;
+  padding-bottom: 0.2rem !important;
+  min-height: 60px;
+  
+}
+
+/* Logo Styling */
+.navbar-brand {
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.02);
+}
+
+.logo-icon {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Nav Links Styling */
+.nav-link {
+  font-size: 0.95rem;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 60%;
+}
+
+/* Dropdown Customization */
+.dropdown-menu {
+  animation: fadeIn 0.3s ease-in-out;
+  min-width: 180px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Buttons */
+.btn-light.btn-sm {
+  padding: 0.25rem 0.8rem !important;
+  font-size: 0.85rem;
+}
+
+.btn-light:hover {
+  background-color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .navbar-nav {
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .ms-auto {
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+}
+/* Logo Image Styling */
+.navbar-logo-img {
+  height: 50px; 
+  width: auto; 
+  object-fit: contain;
+  image-rendering: -webkit-optimize-contrast; 
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15)); 
+  padding: 2px;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link.active {
+  color: #fff !important;
+  font-weight: 700;
+}
+
+.navbar-brand:hover .navbar-logo-img {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.brand-text {
+  font-size: 1.1rem; /* Thoda chota text compact look ke liye */
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}

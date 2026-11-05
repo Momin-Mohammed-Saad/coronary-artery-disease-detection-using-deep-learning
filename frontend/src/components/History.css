@@ -1,0 +1,80 @@
+/* --- History Theme Variables --- */
+:root {
+  --history-bg-card: #ffffff;
+  --history-text: #2c3e50;
+  --history-row-even: #f8f9fa;
+  --history-row-hover: #e9f5ee;
+  --history-border: #dee2e6;
+  --history-thead-bg: #f8f9fa; /* Light mode header */
+  --history-thead-text: #6c757d;
+}
+
+[data-theme='dark'] {
+  --history-bg-card: #1e1e1e;
+  --history-text: #e0e0e0;
+  --history-row-even: #252525;
+  --history-row-hover: #2d2d2d;
+  --history-border: #333333;
+  --history-thead-bg: #2d2d2d;
+  --history-thead-text: #a0a0a0;
+}
+
+/* --- Layout --- */
+.container {
+  max-width: 1100px;
+}
+
+.history-card {
+  background-color: var(--history-bg-card) !important;
+  border: 1px solid var(--history-border) !important;
+  transition: background-color 0.3s ease;
+}
+
+/* Page title */
+h3 {
+  color: var(--history-text);
+  transition: color 0.3s ease;
+}
+
+/* --- Table Styling --- */
+.table {
+  background: transparent !important;
+  color: var(--history-text) !important;
+  margin-bottom: 0;
+}
+
+/* Table header */
+.table thead.custom-thead {
+  background-color: var(--history-thead-bg) !important;
+}
+
+.table thead th {
+  color: var(--history-thead-text) !important;
+  border-bottom: 2px solid var(--history-border) !important;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  background: transparent;
+}
+
+/* Table body cells */
+.table td {
+  border-bottom: 1px solid var(--history-border) !important;
+  padding: 1rem 0.75rem;
+}
+
+/* Stripe & Hover */
+.table tbody tr:nth-child(even) {
+  background-color: var(--history-row-even) !important;
+}
+
+.table tbody tr:hover {
+  background-color: var(--history-row-hover) !important;
+  transition: 0.3s ease;
+}
+
+/* --- Responsive fixes --- */
+@media (max-width: 768px) {
+  .table { font-size: 13px; }
+  .btn-sm { padding: 4px 8px; font-size: 11px; }
+}

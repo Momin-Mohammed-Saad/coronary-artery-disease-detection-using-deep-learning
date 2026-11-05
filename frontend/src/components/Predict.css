@@ -1,0 +1,162 @@
+/* --- Predict Theme Variables --- */
+:root {
+  --predict-bg-card: #ffffff;
+  --predict-text: #2c3e50;
+  --predict-input-bg: #ffffff;
+  --predict-border: #dee2e6;
+  --empty-state-bg: #ffffff;
+}
+
+[data-theme='dark'] {
+  --predict-bg-card: #1e1e1e;
+  --predict-text: #e0e0e0;
+  --predict-input-bg: #2d2d2d;
+  --predict-border: #444444;
+  --empty-state-bg: #181818;
+}
+
+/* --- Layout & Cards --- */
+.container { max-width: 1200px; }
+
+.card {
+  background-color: var(--predict-bg-card) !important;
+  color: var(--predict-text) !important;
+  transition: all 0.3s ease;
+}
+
+/* --- Form Elements Fix --- */
+.form-control, .form-select {
+  background-color: var(--predict-input-bg) !important;
+  border: 1px solid var(--predict-border) !important;
+  color: var(--predict-text) !important;
+}
+
+.form-control::placeholder {
+  color: #888;
+}
+
+.form-control:focus {
+  border-color: #00d2ff !important;
+  box-shadow: 0 0 0 0.25rem rgba(0, 210, 255, 0.25) !important;
+}
+
+/* --- Empty State Box --- */
+.bg-white.border-dashed {
+  background-color: var(--empty-state-bg) !important;
+  border: 2px dashed var(--predict-border) !important;
+  color: var(--predict-text) !important;
+}
+
+/* --- Scan Animation Container --- */
+.scan-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  background: #000;
+  max-height: 450px;
+  box-shadow: 0 10px 30px rgba(0, 210, 255, 0.3);
+}
+
+.scan-image {
+  width: 100%;
+  display: block;
+  opacity: 0.8;
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #00d2ff;
+  box-shadow: 0 0 15px #00d2ff, 0 0 30px #00d2ff;
+  animation: scanMove 2s linear infinite;
+  z-index: 10;
+}
+
+.scan-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 210, 255, 0.15);
+  animation: pulseBg 1.5s ease-in-out infinite alternate;
+}
+
+
+[data-theme='dark'] .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important; /* Light grey color taaki visible ho */
+    opacity: 1; /* Browser default opacity override karne ke liye */
+}
+
+[data-theme='dark'] .form-select {
+    color: #e0e0e0 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important; /* White arrow for dark mode */
+}
+
+[data-theme='dark'] .form-control {
+    color: #ffffff !important;
+}
+
+[data-theme='dark'] input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+[data-theme='dark'] input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@keyframes scanMove {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+@keyframes pulseBg {
+  from { opacity: 0.1; }
+  to { opacity: 0.4; }
+}
+
+/* --- Result Card Styles --- */
+.result-card-professional {
+  border-left: 8px solid;
+}
+
+.normal-border { border-left-color: #2ecc71 !important; }
+.cad-border { border-left-color: #e74c3c !important; }
+
+[data-theme='dark'] .badge.bg-light {
+  background-color: #333 !important;
+  color: #fff !important;
+  border-color: #444 !important;
+}
+
+/* --- AI Diagnostic Report ID Badge Fix --- */
+
+/* Default (Light Mode) */
+.badge.theme-badge, 
+.badge.bg-light.text-dark.border {
+    background-color: #f8f9fa !important; 
+    color: #212529 !important; 
+    border: 1px solid #dee2e6 !important; 
+    font-weight: 600;
+}
+
+/* Dark Mode Override */
+[data-theme='dark'] .badge.theme-badge,
+[data-theme='dark'] .badge.bg-light.text-dark.border {
+    background-color: #2d2d2d !important;
+    color: #00d2ff !important; 
+    border: 1px solid #444 !important;
+}
+
+.text-muted.text-uppercase.ls-2 {
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    color: #6c757d !important;
+}
+
+[data-theme='dark'] .text-muted.text-uppercase.ls-2 {
+    color: #a0a0a0 !important;
+}

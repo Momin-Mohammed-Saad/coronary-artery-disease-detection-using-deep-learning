@@ -1,0 +1,92 @@
+.register-wrapper {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.register-card {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 450px;
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.register-header h3 {
+    color: #1a2a6c;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    display: flex;           
+    align-items: center;       
+    justify-content: center;    
+    gap: 8px;                  
+}
+
+.blue-emoji {
+    display: inline-block;
+    filter: invert(72%) sepia(35%) saturate(769%) hue-rotate(166deg) brightness(101%) contrast(101%);
+    font-size: 0.8em;          
+    line-height: 1;
+}
+
+.register-header p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-input {
+    border-radius: 12px !important;
+    padding: 12px 15px !important;
+    border: 1.5px solid #edf2f7 !important;
+    background-color: #f8fafc !important;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    background-color: #fff !important;
+    border-color: #4a90e2 !important;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.1) !important;
+}
+
+.btn-register {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    border: none !important;
+    padding: 14px !important;
+    border-radius: 12px !important;
+    font-weight: 600 !important;
+    color: white !important;
+    margin-top: 1rem;
+    width: 100%; /* Button full width */
+    transition: all 0.3s ease !important;
+}
+
+.btn-register:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4) !important;
+    filter: brightness(1.1);
+}
+
+.login-link {
+    text-decoration: none;
+    color: #4a90e2;
+    font-weight: 600;
+}
+/* --- REGISTER LOGO STYLING --- */
+.register-logo {
+    width: auto; 
+    height: 110px;
+    display: block;
+    margin: 0 auto 1.5rem auto; 
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}

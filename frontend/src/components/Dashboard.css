@@ -1,0 +1,130 @@
+/* --- 1. GLOBAL BODY & THEME VARIABLES --- */
+:root {
+    --bg-body: #f5f7fa;      /* Light Mode Background */
+    --bg-card: #ffffff;      /* Light Mode Card */
+    --text-main: #2c3e50;
+    --text-muted: #6c757d;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --chart-gradient: linear-gradient(90deg, #e9ecef 25%, #f8f9fa 50%, #e9ecef 75%);
+    --subtle-success: #d1e7dd;
+    --subtle-danger: #f8d7da;
+}
+
+[data-theme='dark'] {
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;     
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --card-shadow: rgba(0, 0, 0, 0.4);
+    --chart-gradient: linear-gradient(90deg, #2d2d2d 25%, #3d3d3d 50%, #2d2d2d 75%);
+    --subtle-success: rgba(25, 135, 84, 0.2);
+    --subtle-danger: rgba(220, 53, 69, 0.2);
+}
+
+/* --- 2. APPLY TO BODY (Yahan se body dark hogi) --- */
+body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-main) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* --- 3. DASHBOARD SPECIFIC COMPONENTS --- */
+
+.dashboard-container {
+    background-color: transparent; 
+    padding: 2rem 0;
+    min-height: 100vh;
+}
+
+.stat-card {
+    background-color: var(--bg-card) !important;
+    color: var(--text-main) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--card-shadow) !important;
+}
+
+.stat-card .text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* --- Placeholder / Loading Chart --- */
+.placeholder-chart {
+    height: 150px;
+    background: var(--chart-gradient);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 10px;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* --- Status Badges / Subtle Backgrounds --- */
+.bg-success-subtle { 
+    background-color: var(--subtle-success) !important; 
+    color: #28a745 !important;
+}
+
+.bg-danger-subtle { 
+    background-color: var(--subtle-danger) !important; 
+    color: #dc3545 !important;
+}
+
+.card-title {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+/* --- Animations --- */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Table aur general text support */
+.theme-text {
+    color: var(--text-main) !important;
+}
+
+.theme-table {
+    color: var(--text-main) !important;
+    background-color: transparent !important;
+}
+
+[data-theme='dark'] .card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+[data-theme='dark'] .table thead tr th {
+    color: var(--text-muted) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-theme='dark'] .table tbody tr td {
+    border-color: rgba(255,255,255,0.05);
+}
+
+[data-theme='dark'] .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+
+[data-theme='dark'] .theme-text, 
+[data-theme='dark'] h5.fw-bold {
+    color: var(--text-main) !important;
+}
+[data-theme='dark'] .text-muted {
+    color: #b0b0b0 !important; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

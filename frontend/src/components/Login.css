@@ -1,0 +1,92 @@
+.login-wrapper {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 40vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-card {
+    background: #ffffff;
+    color: var(--text-color);
+    padding: 1rem 1.5rem; 
+    border-radius: 15px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%; 
+    height: auto; 
+    max-width: 380px; 
+    display: flex;         
+    flex-direction: column;
+}
+
+/* --- NEW LOGO STYLING --- */
+.logo-container {
+    text-align: center;
+    /* margin-bottom: 1.5rem; */
+}
+
+.login-logo {
+    width: auto;
+    height: 80px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.login-logo:hover {
+    transform: scale(1.1) rotate(2deg); 
+}
+/* ------------------------ */
+
+.login-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.login-header h3 {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 1.4rem; 
+    letter-spacing: -0.5px;
+    margin-top: 0.5rem;
+    color: var(--text-color);
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Custom Input Styling */
+.custom-input {
+    border-radius: 10px !important;
+    padding: 12px 15px !important;
+    border: 1px solid #e0e0e0 !important;
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+    border-color: #27ae60 !important;
+    box-shadow: 0 0 0 0.2rem rgba(39, 174, 96, 0.1) !important;
+    transform: translateY(-2px);
+}
+
+/* Modern Button */
+.btn-login {
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    border: none !important;
+    padding: 12px !important;
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease !important;
+    color: white;
+}
+
+.btn-login:hover {
+    box-shadow: 0 8px 15px rgba(39, 174, 96, 0.3) !important;
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
